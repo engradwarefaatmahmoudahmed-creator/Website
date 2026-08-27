@@ -1,0 +1,177 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+{{ service.title }} | Sharaf Eldin
+{% endblock %}
+
+
+{% block content %}
+
+<section class="card-section">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-9">
+
+                <div class="glass-card text-center">
+
+                    <!-- Service Icon -->
+
+                    <div class="icon-box mb-4">
+
+                        <i class="{{ service.icon }}"></i>
+
+                    </div>
+
+
+                    <!-- Service Title -->
+
+                    <h1 class="mb-4">
+                        {{ service.title }}
+                    </h1>
+
+
+                    <!-- Service Description -->
+
+                    <p class="mb-5">
+                        {{ service.description }}
+                    </p>
+
+
+                    <!-- What We Offer -->
+
+                    <div class="text-start mb-5">
+
+                        <h3 class="text-center mb-4">
+                            What We Offer
+                        </h3>
+
+
+                        <div class="row g-4">
+
+                            <div class="col-md-6">
+
+                                <div class="p-4">
+
+                                    <h5>
+                                        <i class="bi bi-check-circle-fill me-2"></i>
+                                        Professional Solutions
+                                    </h5>
+
+                                    <p class="mb-0">
+                                        High-quality technology solutions
+                                        designed around your needs.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <div class="p-4">
+
+                                    <h5>
+                                        <i class="bi bi-check-circle-fill me-2"></i>
+                                        Modern Technologies
+                                    </h5>
+
+                                    <p class="mb-0">
+                                        Using modern tools and technologies
+                                        to build reliable solutions.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <div class="p-4">
+
+                                    <h5>
+                                        <i class="bi bi-check-circle-fill me-2"></i>
+                                        Practical Approach
+                                    </h5>
+
+                                    <p class="mb-0">
+                                        Solutions focused on real-world
+                                        requirements and practical results.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <div class="p-4">
+
+                                    <h5>
+                                        <i class="bi bi-check-circle-fill me-2"></i>
+                                        Technical Support
+                                    </h5>
+
+                                    <p class="mb-0">
+                                        Professional guidance throughout
+                                        the development process.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Call To Action -->
+
+                    <div class="mt-4">
+
+                        <a
+                            href="{% url 'contact' %}"
+                            class="btn-primary"
+                        >
+                            Request This Service
+
+                            <i class="bi bi-arrow-right ms-2"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- Back -->
+
+                    <div class="mt-4">
+
+                        <a
+                            href="{% url 'services' %}"
+                            class="btn-main"
+                        >
+                            <i class="bi bi-arrow-left me-2"></i>
+
+                            Back to Services
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

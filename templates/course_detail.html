@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+{{ course.title }} | Sharaf Eldin
+{% endblock %}
+
+
+{% block content %}
+
+<section class="card-section">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-8">
+
+                <div class="glass-card text-center">
+
+                    <!-- Course Icon -->
+
+                    <div class="icon-box mb-4">
+
+                        <i class="{{ course.icon }}"></i>
+
+                    </div>
+
+
+                    <!-- Course Title -->
+
+                    <h1 class="mb-4">
+                        {{ course.title }}
+                    </h1>
+
+
+                    <!-- Course Description -->
+
+                    <p class="mb-5">
+                        {{ course.description }}
+                    </p>
+
+
+                    <!-- Course Information -->
+
+                    <div class="row g-4 mb-5">
+
+                        <!-- Price -->
+
+                        <div class="col-md-3">
+
+                            <div class="course-info">
+
+                                <i class="bi bi-currency-dollar"></i>
+
+                                <h5>
+                                    Price
+                                </h5>
+
+                                <p>
+                                    {{ course.price }}
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Level -->
+
+                        <div class="col-md-3">
+
+                            <div class="course-info">
+
+                                <i class="bi bi-bar-chart"></i>
+
+                                <h5>
+                                    Level
+                                </h5>
+
+                                <p>
+                                    {{ course.level }}
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Hours -->
+
+                        <div class="col-md-3">
+
+                            <div class="course-info">
+
+                                <i class="bi bi-clock"></i>
+
+                                <h5>
+                                    Hours
+                                </h5>
+
+                                <p>
+                                    {{ course.hours }}
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Lectures -->
+
+                        <div class="col-md-3">
+
+                            <div class="course-info">
+
+                                <i class="bi bi-book"></i>
+
+                                <h5>
+                                    Lectures
+                                </h5>
+
+                                <p>
+                                    {{ course.lectures }}
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Buttons -->
+
+                    <div class="d-flex justify-content-center gap-3">
+
+                        <a href="{% url 'courses' %}"
+                           class="btn-main">
+
+                            Back to Courses
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

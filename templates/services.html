@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Services | Sharaf Eldin
+{% endblock %}
+
+
+{% block content %}
+
+
+<section class="card-section" id="services">
+
+    <div class="container">
+
+
+        <!-- Section Title -->
+
+        <div class="text-center mb-5">
+
+            <h2>
+                Our Services
+            </h2>
+
+            <p>
+                Professional software and technology solutions
+                designed to help individuals and businesses succeed.
+            </p>
+
+        </div>
+
+
+        <!-- Services -->
+
+        <div class="row g-4">
+
+
+            {% for service in services %}
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="glass-card text-center">
+
+
+                        <!-- Icon -->
+
+                        <div class="icon-box mb-4">
+
+                            <i class="{{ service.icon }}"></i>
+
+                        </div>
+
+
+                        <!-- Title -->
+
+                        <h3>
+                            {{ service.title }}
+                        </h3>
+
+
+                        <!-- Description -->
+
+                        <p>
+                            {{ service.description }}
+                        </p>
+
+
+                        <!-- Learn More -->
+
+                        <a
+                            href="{% url 'service_detail' service.id %}"
+                            class="btn-main"
+                        >
+                            Learn More
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+
+            {% empty %}
+
+                <div class="col-12">
+
+                    <p class="text-center">
+                        No services available at the moment.
+                    </p>
+
+                </div>
+
+            {% endfor %}
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+{% endblock %}

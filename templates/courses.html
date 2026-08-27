@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Courses | Sharaf Eldin
+{% endblock %}
+
+
+{% block content %}
+
+<section class="card-section" id="courses">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2>
+                Our Courses
+            </h2>
+
+            <p>
+                Learn programming and software engineering skills with professional training.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            {% for course in courses %}
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="glass-card text-center">
+
+                        <div class="icon-box mb-4">
+
+                            <i class="{{ course.icon }}"></i>
+
+                        </div>
+
+
+                        <h3>
+                            {{ course.title }}
+                        </h3>
+
+
+                        <p>
+                            {{ course.description }}
+                        </p>
+
+
+                        <a href="{% url 'course_detail' course.id %}"
+                           class="btn-main">
+
+                            Learn More
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            {% empty %}
+
+                <div class="col-12">
+
+                    <p class="text-center">
+                        No courses available at the moment.
+                    </p>
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

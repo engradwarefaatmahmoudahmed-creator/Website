@@ -1,0 +1,331 @@
+<section class="card-section py-5">
+
+    <div class="container">
+
+        <!-- Section Title -->
+
+        <div class="text-center mb-5">
+
+            <h2 class="fw-bold">
+                Discover What We Offer
+            </h2>
+
+            <p class="text-muted">
+                Explore our professional services and programming courses
+                designed to help individuals and businesses succeed.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4 justify-content-center">
+
+
+            <!-- Services Card -->
+
+            <div class="col-lg-5 col-md-6">
+
+                <div class="glass-card h-100 text-center p-5">
+
+                    <div class="icon-box mb-4">
+
+                        <i class="bi bi-gear-fill"></i>
+
+                    </div>
+
+
+                    <h3 class="mb-3">
+                        Our Services
+                    </h3>
+
+
+                    <p class="mb-4">
+                        We provide professional software development,
+                        Artificial Intelligence solutions,
+                        web applications, and technical consulting.
+                    </p>
+
+
+                    <a
+                        href="{% url 'services' %}"
+                        class="btn-primary"
+                    >
+                        Explore Services
+
+                        <i class="bi bi-arrow-right ms-2"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Courses Card -->
+
+            <div class="col-lg-5 col-md-6">
+
+                <div class="glass-card h-100 text-center p-5">
+
+                    <div class="icon-box mb-4">
+
+                        <i class="bi bi-mortarboard-fill"></i>
+
+                    </div>
+
+
+                    <h3 class="mb-3">
+                        Our Courses
+                    </h3>
+
+
+                    <p class="mb-4">
+                        Learn Python, Django,
+                        Scratch Programming,
+                        and Software Engineering
+                        through practical projects.
+                    </p>
+
+
+                    <a
+                        href="{% url 'courses' %}"
+                        class="btn-primary"
+                    >
+                        View Courses
+
+                        <i class="bi bi-arrow-right ms-2"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Featured Courses -->
+
+<section class="card-section">
+
+    <div class="container">
+
+
+        <div class="text-center mb-5">
+
+            <h2>
+                Featured Courses
+            </h2>
+
+            <p>
+                Start learning with our professional programming courses.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            {% for course in featured_courses %}
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="glass-card text-center">
+
+
+                        <div class="icon-box mb-4">
+
+                            <i class="{{ course.icon }}"></i>
+
+                        </div>
+
+
+                        <h3>
+                            {{ course.title }}
+                        </h3>
+
+
+                        <p>
+                            {{ course.description }}
+                        </p>
+
+
+                        <div class="mb-4">
+
+                            <strong>
+                                {{ course.level }}
+                            </strong>
+
+                            <br>
+
+                            {{ course.hours }} Hours
+
+                            <br>
+
+                            {{ course.lectures }} Lectures
+
+                        </div>
+
+
+                        <h4 class="mb-4">
+                            {{ course.price }}
+                        </h4>
+
+
+                        <a
+                            href="{% url 'course_detail' course.id %}"
+                            class="btn-main"
+                        >
+                            Learn More
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+
+            {% empty %}
+
+                <div class="col-12">
+
+                    <p class="text-center">
+                        No featured courses available at the moment.
+                    </p>
+
+                </div>
+
+            {% endfor %}
+
+
+        </div>
+
+
+        <div class="text-center mt-5">
+
+            <a
+                href="{% url 'courses' %}"
+                class="btn-primary"
+            >
+                View All Courses
+
+                <i class="bi bi-arrow-right ms-2"></i>
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- Featured Services -->
+
+<section class="card-section">
+
+    <div class="container">
+
+
+        <div class="text-center mb-5">
+
+            <h2>
+                Featured Services
+            </h2>
+
+            <p>
+                Professional technology solutions for your needs.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            {% for service in featured_services %}
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="glass-card text-center">
+
+
+                        <!-- Service Icon -->
+
+                        <div class="icon-box mb-4">
+
+                            <i class="{{ service.icon }}"></i>
+
+                        </div>
+
+
+                        <!-- Service Title -->
+
+                        <h3>
+                            {{ service.title }}
+                        </h3>
+
+
+                        <!-- Service Description -->
+
+                        <p class="mb-4">
+                            {{ service.description }}
+                        </p>
+
+
+                        <!-- Contact -->
+
+                        <a
+                            href="{% url 'contact' %}"
+                            class="btn-main"
+                        >
+                            Contact Us
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+
+            {% empty %}
+
+                <div class="col-12">
+
+                    <p class="text-center">
+                        No featured services available at the moment.
+                    </p>
+
+                </div>
+
+            {% endfor %}
+
+
+        </div>
+
+
+        <div class="text-center mt-5">
+
+            <a
+                href="{% url 'services' %}"
+                class="btn-primary"
+            >
+                View All Services
+
+                <i class="bi bi-arrow-right ms-2"></i>
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>

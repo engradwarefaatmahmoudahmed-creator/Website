@@ -1,0 +1,60 @@
+<section class="card-section" id="statistics">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2>
+                Our Statistics
+            </h2>
+
+            <p>
+                Growing knowledge and building the future of technology.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4 justify-content-center">
+
+            {% for statistic in statistics %}
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="glass-card text-center">
+
+                        <div class="icon-box mb-4">
+
+                            <i class="{{ statistic.icon }}"></i>
+
+                        </div>
+
+                        <h3>
+                            {{ statistic.value }}
+                        </h3>
+
+                        <p>
+                            {{ statistic.title }}
+                        </p>
+
+                    </div>
+
+                </div>
+
+            {% empty %}
+
+                <div class="col-12">
+
+                    <p class="text-center">
+                        No statistics available at the moment.
+                    </p>
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
