@@ -36,8 +36,7 @@ DEBUG = os.environ.get(
     'True'
 ) == 'True'
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ["website-x0edw.faable.link", "localhost", "127.0.0.1"]
 
 # =====================================================
 # Installed Apps
