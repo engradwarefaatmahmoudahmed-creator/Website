@@ -1,0 +1,147 @@
+[
+{
+  "model": "core.course",
+  "pk": 1,
+  "fields": {
+    "title": "Python Programming",
+    "description": "Learn Python from basics to advanced concepts, including OOP and practical projects.",
+    "icon": "bi bi-filetype-py",
+    "price": "1200.00",
+    "level": "Beginner",
+    "hours": 24,
+    "lectures": 8,
+    "is_featured": false,
+    "is_active": true
+  }
+},
+{
+  "model": "core.course",
+  "pk": 2,
+  "fields": {
+    "title": "Django Web Development",
+    "description": "Build professional websites using Python, Django framework, databases, and APIs.",
+    "icon": "bi bi-globe",
+    "price": "1200.00",
+    "level": "Beginner",
+    "hours": 24,
+    "lectures": 8,
+    "is_featured": false,
+    "is_active": true
+  }
+},
+{
+  "model": "core.course",
+  "pk": 3,
+  "fields": {
+    "title": "Scratch Programming",
+    "description": "Creative programming courses for kids through games, animations, and projects.",
+    "icon": "bi bi-controller",
+    "price": "1200.00",
+    "level": "Beginner",
+    "hours": 24,
+    "lectures": 8,
+    "is_featured": false,
+    "is_active": true
+  }
+},
+{
+  "model": "core.contactmessage",
+  "pk": 1,
+  "fields": {
+    "name": "Radwa Refaat Mahmoud Ahmed",
+    "email": "engradwarefaatmahmoudahmed@gmail.com",
+    "subject": "Course Inquiry",
+    "message": "I want to know more about the Python course.",
+    "created_at": "2026-08-12T13:44:22.830Z",
+    "is_read": false
+  }
+},
+{
+  "model": "core.service",
+  "pk": 1,
+  "fields": {
+    "title": "Web Development",
+    "description": "Professional web development using modern technologies to build fast, responsive, and scalable web applications.",
+    "icon": "bi bi-globe",
+    "is_featured": false,
+    "is_active": true
+  }
+},
+{
+  "model": "core.service",
+  "pk": 2,
+  "fields": {
+    "title": "AI Solutions",
+    "description": "Artificial Intelligence solutions designed to help businesses build intelligent and innovative applications.",
+    "icon": "bi bi-robot",
+    "is_featured": false,
+    "is_active": true
+  }
+},
+{
+  "model": "core.service",
+  "pk": 3,
+  "fields": {
+    "title": "Software Development",
+    "description": "Custom software development solutions designed to meet business requirements and solve real-world problems.",
+    "icon": "bi bi-code-slash",
+    "is_featured": false,
+    "is_active": true
+  }
+},
+{
+  "model": "core.service",
+  "pk": 4,
+  "fields": {
+    "title": "Technical Consulting",
+    "description": "Professional technical consulting to help individuals and businesses choose the right technologies and development solutions.",
+    "icon": "bi bi-lightbulb",
+    "is_featured": false,
+    "is_active": true
+  }
+},
+{
+  "model": "core.statistic",
+  "pk": 1,
+  "fields": {
+    "title": "Students",
+    "value": "100+",
+    "icon": "bi bi-people",
+    "is_active": true,
+    "order": 1
+  }
+},
+{
+  "model": "core.statistic",
+  "pk": 2,
+  "fields": {
+    "title": "Professional Courses",
+    "value": "10+",
+    "icon": "bi bi-book",
+    "is_active": true,
+    "order": 2
+  }
+},
+{
+  "model": "core.statistic",
+  "pk": 3,
+  "fields": {
+    "title": "Projects",
+    "value": "50+",
+    "icon": "bi bi-laptop",
+    "is_active": true,
+    "order": 3
+  }
+},
+{
+  "model": "core.statistic",
+  "pk": 4,
+  "fields": {
+    "title": "Years Experience",
+    "value": "5+",
+    "icon": "bi bi-award",
+    "is_active": true,
+    "order": 4
+  }
+}
+]
